@@ -1,0 +1,127 @@
+
+
+
+
+
+
+
+
+
+     <!-- Start Content-->
+     <div class="container-fluid">
+                        
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                      
+                    </div>
+                    <h4 class="page-title">مجموعة</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title --> 
+
+
+
+        <div class="container">
+
+
+            <div class="row my-3 w-100">
+
+                <h1>قائمة المجموعة</h1>
+              
+                <button routerLink="/groupe/add" style="margin-right: auto;" class="btn btn-primary">أضف مجموعة جديدة</button>
+
+            </div>
+
+
+            <div class="row w-100">
+
+
+                <table class="table">
+
+                    
+                        <thead>
+                            <th>#</th>
+                            <th>الاسم</th>
+                          
+                            <th>الفئة</th>
+                            <th>الصورة</th>
+                            <th>حدث</th>
+                          
+
+                           
+                            <th></th>
+                        </thead>
+                   
+                        <tbody>
+
+                            <tr *ngFor="let c of groupes; let i = index">
+                                <td>{{i}}</td>
+                             
+                                <td>{{c.name}}</td>
+                               
+                                <td>{{c.categorie}}</td>
+                                <td>
+
+                                    <img style="width: 70px;" [src]="'http://5.196.13.136:3100/getfile/'+c.image" alt="">
+
+
+                                </td>
+
+                               
+
+                              
+                                <td>
+
+                                    <button (click)="delete(c._id)" class="btn btn-danger mx-2">
+                                        حذف
+                                    </button>
+                                    <button *ngIf="!c.status"  (click)="uptStatusGroupe(c._id, !c.status)"  class="btn btn-info mx-2">
+                                        قبول
+                                    </button>
+
+                                    <button *ngIf="c.status"  (click)="uptStatusGroupe(c._id, !c.status)"  class="btn btn-success mx-2">
+                                        رفض
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+
+
+
+                        </tbody>
+
+
+
+
+
+                </table>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+     <!-- Start Content-->
+     <div class="container-fluid">
+                        
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tahalip</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Contact</a></li>
+                            
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Contact</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title --> 
+
+
+
+        <div class="container">
+
+
+            <div class="row mt-3">
+
+                <h1>list contact</h1>
+              
+
+            </div>
+
+
+            <div class="row w-100">
+
+
+                <table class="table">
+
+                    
+                        <thead>
+                            <th>#</th>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>message</th>
+                            <th></th>
+                        </thead>
+                   
+                        <tbody>
+
+                            <tr *ngFor="let c of contacts; let i = index">
+                                <td>{{i}}</td>
+                                <td>{{c.name}}</td>
+                                <td>{{c.email}}</td>
+                                <td>{{c.message}}</td>
+                                <td>
+
+                                    <button (click)="delete(c._id)" class="btn btn-danger">
+                                        delete
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+
+
+
+                        </tbody>
+
+
+
+
+
+                </table>
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+        </div>

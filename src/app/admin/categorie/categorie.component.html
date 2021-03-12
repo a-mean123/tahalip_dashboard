@@ -1,0 +1,64 @@
+
+
+
+
+<div class="container">
+
+
+    <div class="row">
+
+
+        <h1 class="lead">إضافة فئة</h1>
+
+        <input type="text" placeholder="categorie name" [(ngModel)]="cat.name" class="form-control">
+
+        <button class="btn btn-primary mt-2" (click)="ajoutCategorie()">إضافة</button>
+
+    </div>
+
+
+
+
+    <div class="row">
+
+
+        <h1 class="lead">قائمة الفئات</h1>
+
+        <table class="table">
+
+
+            <thead>
+
+                <tr>
+                    <th>#</th>
+                    <th>الفئات</th>
+                    <th>حدث</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let c of categories; let i = index">
+                    <td> {{i}} </td>
+                    <td> {{c.name}} </td>
+                    <td>
+                        <button (click)="delete(c._id)" class="btn btn-danger">حذف</button>
+                    </td>
+                </tr>
+            </tbody>
+
+
+
+
+
+
+        </table>
+
+
+
+    </div>
+
+
+
+</div>

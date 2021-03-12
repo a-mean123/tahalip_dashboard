@@ -1,0 +1,40 @@
+
+
+
+<div class="container">
+
+
+    <table class="table">
+
+
+        <thead>
+
+            <tr>
+                <td>#</td>
+                <td>اسم العضو</td>
+                <td>اسم المجموعة</td>
+                <td>حالة العضوية</td>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let j of join; let i = index">
+                <td>{{i}}</td>
+                <td>{{j?.membre[0].name}}</td>
+                <td>{{j?.groupe[0].name}}</td>
+
+                <td>
+                    <button (click)="upt_join(j._id, !j.status , j.membreId, j.groupeId)" *ngIf="j.status" class="btn btn-danger">إلغاء</button>
+                    <button (click)="upt_join(j._id, !j.status, j.membreId , j.groupeId)" *ngIf="!j.status" class="btn btn-success">قبول</button>
+                </td>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
+
+</div>

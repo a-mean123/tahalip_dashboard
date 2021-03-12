@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+
+     <!-- Start Content-->
+     <div class="container-fluid">
+                        
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tahalip</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Contact</a></li>
+                            
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Contact</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title --> 
+
+
+
+        <div class="container">
+
+
+            <div class="row my-3 w-100">
+
+                <h1>Add NEW question</h1>
+              
+                <button routerLink="/question" style="margin-right: auto;" class="btn btn-primary">back to list</button>
+
+            </div>
+
+            <p class="lead">put video title</p>
+               
+
+            <textarea [(ngModel)]="question.title" name="text" id="" cols="30" rows="3" class="form-control" placeholder="question text"></textarea>
+
+
+
+                <p class="lead">put video text</p>
+               
+
+                <textarea [(ngModel)]="question.text" name="text" id="" cols="30" rows="6" class="form-control" placeholder="question text"></textarea>
+
+
+
+                <p class="lead">id video</p>
+               
+
+                <input class="form-contol" type="text" [(ngModel)]="question.idYoutube">
+
+
+
+                <p class="lead">upload qustion as image</p>
+               
+
+               <input #fileInput name="image"  type="file"  class="form-control">
+
+                <button (click)="add()" class="btn btn-dark mt-3">
+
+                    Add
+                </button>
+
+
+        </div>
+
+
+
+
+
+
+
+        </div>

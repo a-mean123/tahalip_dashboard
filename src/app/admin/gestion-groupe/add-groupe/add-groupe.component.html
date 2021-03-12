@@ -1,0 +1,86 @@
+
+
+
+
+
+
+
+
+
+     <!-- Start Content-->
+     <div class="container-fluid">
+                        
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tahalip</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">مجموعات</a></li>
+                            
+                        </ol>
+                    </div>
+                    <h4 class="page-title">مجموعات</h4>
+                </div>
+            </div>
+        </div>     
+        <!-- end page title --> 
+
+
+
+        <div class="container">
+
+
+            <div class="row my-3 w-100">
+
+                <h1>أضف مجموعة جديدة</h1>
+              
+                <button routerLink="/groupe" style="margin-right: auto;" class="btn btn-primary">الرجوع للقائمة</button>
+
+            </div>
+
+            <div *ngIf="alert" style="margin: 16px;" class="alert alert-success" role="alert">
+                نجاح
+              </div>
+
+
+                 <p class="lead">أسم المجموعة</p>
+
+                <input type="text" [(ngModel)]="groupe.name" class="form-control">
+              
+                <p class="lead">وصف المجموعة</p>
+
+                <textarea [(ngModel)]="groupe.description" name="" id="" cols="30" rows="4" class="form-control"></textarea>
+
+
+
+                <p class="lead">فئة المجموعة</p>
+
+
+                <select [(ngModel)]="groupe.categorie" class="form-control">
+
+                    <option *ngFor="let c of categories" [ngValue]="c.name" >{{c.name}}</option>
+                </select>
+
+                <p class="lead">الصورة</p>
+
+                <input #fileInput name="image" type="file"  class="form-control">
+              
+             
+
+                <button (click)="add()" class="btn btn-dark mt-3">
+
+                    أضف
+                </button>
+
+
+        </div>
+
+
+
+
+
+
+
+        </div>
